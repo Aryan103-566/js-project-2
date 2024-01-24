@@ -1,0 +1,130 @@
+/** COMMON CSS STARTS HERE */
+:root{
+    --text-color: #000000;
+    --backGround-color: white;
+    --bgColor: white;
+    --primaryColor: #222;
+    --textColor: white;
+}
+
+body.darkmode{
+    --bgColor: #0A0919;
+    --primaryColor: white;
+    --textColor: #222;
+    transition: 0.35s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "arial";
+    background-color: var(--bgColor);
+    transition: 0.5s;
+    cursor: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/** COMMON CSS ENDS HERE */
+
+
+/** CUSTOM CURSOR STARTS HERE */
+.cursor {
+width: 30px;
+height: 30px;
+border: 1px solid var(--text-color);
+border-radius: 50%;
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%,-50%);
+pointer-events: none;
+z-index: 999999;
+}
+
+.dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: var(--text-color);
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%,-50%);
+transition: 0.04s;
+pointer-events: none; 
+z-index: 9999;
+}
+/** CUSTOM CURSOR ENDS HERE */
+
+
+/** DARKMODE STARTS HERE */
+#darkModeArea{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#darkModeArea .wrapper{
+    display: flex;
+    align-items: center;
+}
+#darkModeArea .wrapper h2 {
+    font-size: 80px; 
+    margin-right: 20px;
+    color: var(--primaryColor);
+}
+.darkModeBtn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.darkModeBtn .sunicon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    background-color: #EBF520;
+    transition: 0.325s;
+}
+.darkModeBtn .moonicon{
+    background-color: #0A0919;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 40px;
+    font-size: 18px;   
+}
+body.darkmode .darkModeBtn{
+     box-shadow: rgba(244, 244, 255, 0.756) 0px 7px 29px 0px;
+     outline: 2px solid white;
+}
+body.darkmode .darkModeBtn .sunicon{
+    margin-top: -100%;
+}
+/** DARKMODE ENDS HERE */
